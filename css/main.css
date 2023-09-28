@@ -1,0 +1,136 @@
+	/* RESET AND DEFUALT  */
+	:root {
+		/* Primary  */
+		--Orange: hsl(25, 97%, 53%);
+	
+		/* ## Neutral */
+	
+		--White: hsl(0, 0%, 100%);
+		--LightGrey: hsl(217, 12%, 63%);
+		--MediumGrey: hsl(216, 12%, 54%);
+		--DarkBlue: hsl(213, 19%, 18%);
+		--VeryDarkBlue: hsl(216, 12%, 8%);
+	}
+body {
+	font-family: 'Overpass', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--VeryDarkBlue);
+	color: var(--White);
+	min-height: 100vh;
+}
+
+* ,*::after , *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+img {
+	display: block;
+}
+p {
+	font-size: 15px;
+}
+/* Start Styleing */
+.rating_container {
+	max-width: 370px;
+	background-color: var(--DarkBlue);
+	padding: 30px;
+	border-radius: 20px;
+	margin: 15px 0;
+	/* display: none; */
+}
+.rating_container.hide {
+	display: none;
+}
+.rating_container img {
+	background-color: hsl(215, 18%, 21%);
+	padding: 15px;
+	border-radius: 50%;
+}
+.rating_container .title {
+	font-size: 1.6rem;
+	margin: 20px 0 15px;
+}
+.rating_container .description {
+	color: var(--LightGrey);
+	line-height: 23px;
+}
+.rating_container .bullets {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 25px 0;
+}
+.rating_container .bullets li{
+	background-color: hsl(214, 19%, 24%);
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--LightGrey);
+	transition: all 0.3s ease-in;
+}
+.rating_container .bullets li:hover {
+	background-color: var(--Orange);
+	color: var(--White);
+}
+.rating_container .bullets li.active  {
+	background: var(--LightGrey);
+	color: var(--White);
+	font-weight: 700;
+}
+.rating_container .submit {
+	width: 100%;
+	padding: 15px;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+	margin: auto;
+	color: var(--White);
+	background-color: var(--Orange);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 5px;
+	transition: all 0.3s ease-in;
+}
+.rating_container .submit:hover {
+	background-color: var(--White);
+	color: var(--Orange);
+}
+/* Start Thank you section  */
+.thank_you {
+	max-width: 370px;
+	background-color: var(--DarkBlue);
+	padding: 30px;
+	border-radius: 20px;
+	margin: 15px 0;
+	text-align: center;
+	display: none;
+}
+.thank_you img {
+	margin: 10px auto 25px;
+}
+.thank_you .selected {
+	background-color: hsl(214, 19%, 22%);
+	padding: 10px 0;
+	border-radius: 20px;
+	color: var(--Orange);
+	width: 95%;
+	margin: 0 auto 25px;
+}
+
+.thank_you .description {
+	color: var(--LightGrey);
+	padding: 20px 5px;
+}
+.thank_you.active {
+	display: block;
+}
